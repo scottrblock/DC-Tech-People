@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Id:</b>
+  <%= @user.id %>
+</p>
+
+<p>
+  <b>Bio:</b>
+  <%= @user.bio %>
+</p>
+
+<p>
+  <b>Follower count:</b>
+  <%= @user.follower_count %>
+</p>
+
+<p>
+  <b>Angellist url:</b>
+  <%= @user.angellist_url %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @user.image_url %>
+</p>
+
+<p>
+  <b>Online bio url:</b>
+  <%= @user.online_bio_url %>
+</p>
+
+<p>
+  <b>Twitter url:</b>
+  <%= @user.twitter_url %>
+</p>
+
+<p>
+  <b>Facebook url:</b>
+  <%= @user.facebook_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

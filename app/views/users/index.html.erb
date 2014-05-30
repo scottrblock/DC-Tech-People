@@ -1,0 +1,39 @@
+<h1>Listing users</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Id</th>
+    <th>Bio</th>
+    <th>Follower count</th>
+    <th>Angellist url</th>
+    <th>Image url</th>
+    <th>Online bio url</th>
+    <th>Twitter url</th>
+    <th>Facebook url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.name %></td>
+    <td><%= user.id %></td>
+    <td><%= user.bio %></td>
+    <td><%= user.follower_count %></td>
+    <td><%= user.angellist_url %></td>
+    <td><%= user.image_url %></td>
+    <td><%= user.online_bio_url %></td>
+    <td><%= user.twitter_url %></td>
+    <td><%= user.facebook_url %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User', new_user_path %>

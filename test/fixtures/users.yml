@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  id: 1
+  bio: MyString
+  follower_count: 1
+  angellist_url: MyString
+  image_url: MyString
+  online_bio_url: MyString
+  twitter_url: MyString
+  facebook_url: MyString
+
+two:
+  name: MyString
+  id: 1
+  bio: MyString
+  follower_count: 1
+  angellist_url: MyString
+  image_url: MyString
+  online_bio_url: MyString
+  twitter_url: MyString
+  facebook_url: MyString
