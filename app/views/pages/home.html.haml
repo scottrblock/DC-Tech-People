@@ -33,12 +33,12 @@
       = total_users_that_have_gender
       people analyzed,
       %strong.number-females
-        = num_gender("female")
-        were female
+        = pluralize(num_gender('female'), 'was', 'were')
+        female
       and
       %strong.number-males
-        = num_gender("male")
-        were male
+        = pluralize(num_gender('male'), 'was', 'were')
+        male
       \:
     = render "/users/gender_graphic", {:female_count => num_gender("female"), :male_count => num_gender("male")}
     %p
@@ -48,12 +48,12 @@
         = total_leaders
       total leaders,
       %strong.leader-female
-        = num_gender_who_is_leader("female")
-        were female
+        = pluralize(num_gender_who_is_leader('female'), 'was', 'were')
+        female
       and
       %strong.leader-male
-        = num_gender_who_is_leader("male")
-        were male
+        = pluralize(num_gender_who_is_leader('male'), 'was', 'were')
+        male
       \:
       = render "/users/gender_graphic", {:female_count => num_gender_who_is_leader("female"), :male_count => num_gender_who_is_leader("male")}
 
