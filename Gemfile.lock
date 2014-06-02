@@ -68,6 +68,7 @@ GEM
     mime-types (1.25.1)
     multi_json (1.10.1)
     multi_xml (0.5.5)
+    pg (0.17.1)
     polyglot (0.3.4)
     rack (1.4.5)
     rack-cache (1.2)
@@ -131,6 +132,7 @@ DEPENDENCIES
   httparty
   jquery-rails
   json
+  pg
   rails (= 3.2.11)
   sass-rails (~> 3.2.3)
   sqlite3
