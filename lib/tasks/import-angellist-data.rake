@@ -8,18 +8,18 @@ namespace :db do
     cur_page = 1
     on_last_page = false
     location_id = 1691    #DC Location
-
     
     begin
 
-      puts "On PAGE #{cur_page}"
 
       response = HTTParty.get("http://api.angel.co/1/tags/#{location_id}/users?investors=by_residence&page=#{cur_page}")
       json = JSON.parse(response.body)
 
       api_users = json["users"]
       api_users.each do |api_u|
-        if api_u["locations"].length == 1 || (!api_u["location"].nil? && api_u["location"].first["id"] == location_id)
+
+       
+        if api_u["locations"].length == 1 || (!api_u["locations"].nil? && api_u["locations"].first["id"] == location_id)
           u = User.new
 
           u.name            = api_u["name"]
