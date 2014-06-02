@@ -19,20 +19,20 @@ namespace :db do
 
       api_users = json["users"]
       api_users.each do |api_u|
+        if api_u["locations"].length == 1
+          u = User.new
 
-        u = User.new
+          u.name            = api_u["name"]
+          u.bio             = api_u["bio"]
+          u.follower_count  = api_u["follower_count"]
+          u.angellist_url   = api_u["angellist_url"]
+          u.image_url       = api_u["image"]
+          u.online_bio_url  = api_u["online_bio_url"]
+          u.twitter_url     = api_u["twitter_url"]
+          u.facebook_url    = api_u["facebook_url"]
 
-        u.name            = api_u["name"]
-        u.bio             = api_u["bio"]
-        u.follower_count  = api_u["follower_count"]
-        u.angellist_url   = api_u["angellist_url"]
-        u.image_url       = api_u["image"]
-        u.online_bio_url  = api_u["online_bio_url"]
-        u.twitter_url     = api_u["twitter_url"]
-        u.facebook_url    = api_u["facebook_url"]
-
-        u.save!
-
+          u.save!
+        end
       end
 
 
