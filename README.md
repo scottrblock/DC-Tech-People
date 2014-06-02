@@ -1,7 +1,9 @@
 DC-Tech-People
 ==============
 
-Analyzing the demographics of #dctech
+Analyzing the demographics of #dctech.
+
+In production at http://dctechpeople.herokuapp.com/
 
 Contributing
 ============
