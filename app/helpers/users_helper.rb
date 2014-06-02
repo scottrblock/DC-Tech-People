@@ -1,4 +1,8 @@
 module UsersHelper
+  def total_users
+    User.all.length
+  end
+
   def num_gender(gender = "female")
     num = 0
     User.all.each do |u|
@@ -11,7 +15,7 @@ module UsersHelper
     num
   end
 
-  def total
+  def total_users_that_have_gender
     num_gender(gender = "female") + num_gender(gender = "male")
   end
 
@@ -20,7 +24,6 @@ module UsersHelper
     User.all.each do |u|
 
       if u.gender == gender && u.probability >= 0.75 && u.follower_count >= 1000
-        puts u.name
         num += 1
       end
     end

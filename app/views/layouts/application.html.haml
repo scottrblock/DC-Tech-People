@@ -1,0 +1,21 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}/
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %title= content_for?(:title) ? yield(:title) : "DCTech People"
+    = stylesheet_link_tag    "application"
+    %link{href: "//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", rel: "stylesheet"}/
+    = javascript_include_tag "vendor/modernizr"
+    = csrf_meta_tags
+
+  %body
+    = yield
+    
+    %footer.footer
+      .row
+        .small-12.large-10.columns.large-offset-1
+          Made with love by
+          = link_to "Scott Block", "http://twitter.com/insidetheblock"
+
+    = javascript_include_tag "application"

@@ -7,7 +7,7 @@ namespace :db do
 
     cur_page = 1
     on_last_page = false
-    location_id = 1691
+    location_id = 1691    #DC Location
 
     
     begin

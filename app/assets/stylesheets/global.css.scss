@@ -1,0 +1,20 @@
+$pink: #FF007A;
+$blue: #007AFF;
+
+.gender-graphic{
+
+  .fa-female{
+    color: $pink;
+  }
+
+  .fa-male{
+    color: $blue;
+  }
+
+}
+
+footer{
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: 1px solid #666;
+}
