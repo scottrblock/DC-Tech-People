@@ -19,7 +19,7 @@ namespace :db do
 
       api_users = json["users"]
       api_users.each do |api_u|
-        if api_u["locations"].length == 1 || api_u["location"].first["id"] == location_id
+        if api_u["locations"].length == 1 || (!api_u["location"].nil? && api_u["location"].first["id"] == location_id)
           u = User.new
 
           u.name            = api_u["name"]
