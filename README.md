@@ -18,6 +18,7 @@ bundle install
 ````sh
 rake db:migrate
 rake db:load_angel_dc_users
+rake db:load_facebook_users
 rake db:add_gender_to_users
 ```
 - Get hacking and send a pull request!
