@@ -1,0 +1,49 @@
+%h3.subhead
+  Taking a look at AngelList Data
+%p
+  = link_to "AngelList", "http://angel.co" 
+  is a social network that connects startups with investors. They provide an API to access their data, which we dive into below:
+%p
+  There are
+  %strong.total-people
+    = total_users_from_source("AngelList")
+  people on AngelList who claim to live in the Washington DC region. They have DC listed as either their first or only location.
+%p
+  We use 
+  = link_to "Genderize.io", "http://genderize.io"
+  to predict if a user is male or female. If their data determines someone's
+  first name to have a 75% or higher probability of a given gender, we
+  include them in our analysis.
+%p
+  Genderize.io determined the gender with at least 75% probability for
+  %strong.total-people-with-gender
+    = total_users_that_have_gender('AngelList')
+  people.
+%p
+  Of the 
+  = total_users_that_have_gender('AngelList')
+  people analyzed,
+  %strong.number-females
+    = pluralize(num_gender('female', 'AngelList'), 'was', 'were')
+    female
+  and
+  %strong.number-males
+    = pluralize(num_gender('male', 'AngelList'), 'was', 'were')
+    male
+  \:
+= render "/users/gender_graphic", {:female_count => num_gender('female', 'AngelList'), :male_count => num_gender('male', 'AngelList'), :divisor => 1}
+%p
+  We define a leader as someone who has more than 1,000 followers on AngelList.
+  Of
+  %strong.total-leaders
+    = total_leaders
+  total leaders,
+  %strong.leader-female
+    = pluralize(num_gender_who_is_leader('female'), 'was', 'were')
+    female
+  and
+  %strong.leader-male
+    = pluralize(num_gender_who_is_leader('male'), 'was', 'were')
+    male
+  \:
+  = render "/users/gender_graphic", {:female_count => num_gender_who_is_leader("female"), :male_count => num_gender_who_is_leader("male"), :divisor => 1}

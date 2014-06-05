@@ -1,0 +1,35 @@
+%h3.subhead
+  Moving onto Facebook data
+%p
+  The
+  = link_to "DC Tech Facebook Group", "https://www.facebook.com/groups/washdctech/" 
+  is a vibrant, public forum where various people of the #dctech comminity interact. 
+  We use Facebook's API to take a look at its users:
+%p
+  There are
+  %strong.total-people
+    = total_users_from_source("Facebook")
+  people publicly in the DC Tech Facebook group.
+%p
+  We again use 
+  = link_to "Genderize.io", "http://genderize.io"
+  in the same manner to predict if a user is male or female because
+  we do not have full access to their Facebook profile data.
+%p
+  Genderize.io determined the gender with at least 75% probability for
+  %strong.total-people-with-gender
+    = total_users_that_have_gender('Facebook')
+  people.
+%p
+  Of the 
+  = total_users_that_have_gender('Facebook')
+  people analyzed,
+  %strong.number-females
+    = pluralize(num_gender('female', 'Facebook'), 'was', 'were')
+    female
+  and
+  %strong.number-males
+    = pluralize(num_gender('male', 'Facebook'), 'was', 'were')
+    male
+  (one icon is equal to 10 people below):
+= render "/users/gender_graphic", {:female_count => num_gender('female', 'Facebook'), :male_count => num_gender('male', 'Facebook'), :divisor => 10}

@@ -1,6 +1,11 @@
 $pink: #FF007A;
 $blue: #007AFF;
 
+.subhead{
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
 .gender-graphic{
 
   .fa-female{
@@ -14,7 +19,7 @@ $blue: #007AFF;
 }
 
 footer{
-  padding-top: 30px;
+  padding: 30px 0;
   margin-top: 30px;
   border-top: 1px solid #666;
 }

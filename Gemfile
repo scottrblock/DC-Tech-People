@@ -31,8 +31,12 @@ gem 'jquery-rails'
 
 gem 'json'
 gem 'httparty'
-gem 'genderize_io_rb'
+
+#living on the edge here. My fork allows us to pass extra param to
+# bypass rate limit
+gem 'genderize_io_rb', github: 'scottrblock/genderize_io_rb'
 gem 'thin'
+gem "koala", "~> 1.10.0rc"
 
 gem 'haml'
 gem 'foundation-rails'

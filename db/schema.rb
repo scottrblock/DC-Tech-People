@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140530001522) do
+ActiveRecord::Schema.define(:version => 20140603055714) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(:version => 20140530001522) do
     t.datetime "updated_at",     :null => false
     t.string   "gender"
     t.float    "probability"
+    t.string   "facebook_id"
+    t.string   "source"
   end
 
 end

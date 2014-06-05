@@ -9,7 +9,8 @@ namespace :db do
       gir = GenderizeIoRb.new
 
       begin  
-        res = gir.info_for_name(u.first_name) 
+        #temp solution around rate limit from generize lead dev
+        res = gir.info_for_name(u.first_name, {:apikey => "freebie"}) 
       rescue  
       else
         u.probability = res[:result].probability

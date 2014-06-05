@@ -30,7 +30,7 @@ namespace :db do
           u.online_bio_url  = api_u["online_bio_url"]
           u.twitter_url     = api_u["twitter_url"]
           u.facebook_url    = api_u["facebook_url"]
-
+          u.source          = "AngelList"
           u.save!
         end
       end
