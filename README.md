@@ -10,6 +10,10 @@ Contributing
 This is a Ruby on Rails (3.2) application. To contribute:
 
 - Fork or clone this repo locally
+- Install dependencies
+```sh
+bundle install
+```
 - Run the following 3 rake commands to seed your database:
 ````sh
 rake db:migrate
