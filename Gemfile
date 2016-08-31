@@ -30,7 +30,7 @@ end
 gem 'jquery-rails'
 
 gem 'json'
-gem 'httparty'
+gem 'httparty' 
 
 #living on the edge here. My fork allows us to pass extra param to
 # bypass rate limit
